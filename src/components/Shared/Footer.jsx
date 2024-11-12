@@ -1,9 +1,15 @@
+import { Link } from "react-router-dom";
+import img from "../../assets/job.png";
+
 const Footer = () => {
   return (
     <div>
-      <footer className="footer items-center p-10 bg-[#F1F8E9] text-[#032418]">
+      <footer className="footer items-center p-10 bg-[#C8E6C9] text-[#032418]">
         <aside className="items-center grid-flow-col">
-          <h1 className="font-bold text-xl">JobBridge </h1>
+        <Link to="/" className="btn btn-ghost text-xl text-[#2E7D32]">
+          <img className="w-10" src={img} alt="" />
+          JobBridge
+        </Link>
         </aside>
         <p className="  opacity-70">Copyright © 2024 - All right reserved</p>
 

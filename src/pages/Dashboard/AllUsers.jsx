@@ -16,25 +16,25 @@ const AllUsers = () => {
         }
     });
 
-    const handleMakeAdmin = (user) => {
+    const updateRole = (user, newRole) => {
         Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            text: `Change role to ${newRole}?`,
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            confirmButtonColor: "#2E7D32", // Emerald Green
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, make admin!"
+            confirmButtonText: `Yes, change to ${newRole}`
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.patch(`/users/admin/${user._id}`)
+                axiosSecure.patch(`/users/role/${user._id}`, { role: newRole })
                     .then((res) => {
                         if (res.data.modifiedCount > 0) {
                             refetch();
                             Swal.fire({
                                 position: "top-end",
                                 icon: "success",
-                                title: `${user.name} is an Admin Now!`,
+                                title: `${user.name}'s role updated to ${newRole}!`,
                                 showConfirmButton: false,
                                 timer: 1500
                             });
@@ -52,13 +52,14 @@ const AllUsers = () => {
         });
     };
 
+
     const handleDeleteUser = (user) => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
+            confirmButtonColor: "#2E7D32", // Emerald Green
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
@@ -88,14 +89,14 @@ const AllUsers = () => {
 
     return (
         <div>
-            <div className="flex justify-evenly my-4">
-                <h2 className="text-3xl">All Users</h2>
-                <h2 className="text-3xl">Total Users: {users.length}</h2>
+            <div className="flex justify-evenly my-4 ">
+                <h2 className="text-3xl text-[#063840]">All Users</h2>
+                <h2 className="text-3xl text-[#063840]">Total Users: {users.length}</h2>
             </div>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     <thead>
-                        <tr>
+                        <tr className="bg-[#C8E6C9] text-[#063840] font-bold text-xl"> {/* Mint Green background */}
                             <th></th>
                             <th>Name</th>
                             <th>Email</th>
@@ -105,26 +106,27 @@ const AllUsers = () => {
                     </thead>
                     <tbody>
                         {users.map((user, index) => (
-                            <tr key={user._id}>
+                            <tr className="text-black dark:text-[#388E3C] font-semibold" key={user._id}>
                                 <th>{index + 1}</th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>
-                                    {user.role === 'admin' ? 'Admin' : (
-                                        <button
-                                            onClick={() => handleMakeAdmin(user)}
-                                            className="btn bg-yellow-500"
-                                        >
-                                            <FaUsers className="text-white text-2xl" />
-                                        </button>
-                                    )}
+                                    <select
+                                        className="bg-[#C8E6C9] dark:bg-[#2E7D32] text-black dark:text-white rounded-lg p-1"
+                                        value={user.role}
+                                        onChange={(e) => updateRole(user, e.target.value)}
+                                    >
+                                        <option value="admin">Admin</option>
+                                        <option value="TaskCreator">TaskCreator</option>
+                                        <option value="worker">Worker</option>
+                                    </select>
                                 </td>
                                 <td>
                                     <button
                                         onClick={() => handleDeleteUser(user)}
-                                        className="btn btn-ghost btn-lg"
+                                        className="btn btn-ghost btn-lg text-[#2E7D32]" // Emerald Green for delete icon
                                     >
-                                        <FaTrashAlt className="text-red-600" />
+                                        <FaTrashAlt />
                                     </button>
                                 </td>
                             </tr>

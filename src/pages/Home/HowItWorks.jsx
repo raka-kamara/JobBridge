@@ -40,7 +40,7 @@ const HowItWorks = () => {
   return (
     <div className="py-12 bg-[gray-100] rounded-2xl my-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-center text-[#032418] mb-8 animate-pulse">
+        <h2 className="text-3xl font-extrabold text-center text-[#063840] mb-8 animate-pulse">
           How It Works?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

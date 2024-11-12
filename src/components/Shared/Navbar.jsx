@@ -1,33 +1,30 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import img from "../../assets/job.png";
 
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
+
 
   const [isOpen, setIsOpen] = useState(false);
   const navOptions = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" className="text-[#063840] font-semibold">Home</Link>
       </li>
-      <li>
-        <Link to="/d">Parent</Link>
-      </li>
-      <li>
-        <Link to="/dashboard">Dashboard</Link>
-      </li>
+      {user && <li><Link to="/dashboard" className="text-[#063840] font-semibold">Dashboard</Link></li>}
     </>
   );
 
-    const handleLogOut = () => {
-      logOut()
-        .then(() => {})
-        .catch((error) => console.log(error));
-    };
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
 
   return (
-    <div className="navbar bg-[#F1F8E9] fixed z-10 max-w-screen-2xl text-[#032418]">
+    <div className="navbar bg-[#F1F8E9] fixed z-10 max-w-screen-2xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,7 +50,10 @@ function Navbar() {
             {navOptions}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">JobBridge</a>
+        <Link to="/" className="btn btn-ghost text-xl text-[#2E7D32]">
+          <img className="w-10 hidden md:block" src={img} alt="logo" />
+          JobBridge
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navOptions}</ul>
@@ -61,8 +61,8 @@ function Navbar() {
       {
         <div className="navbar-end">
           {user ? (
-             <>
-             <div className="relative group">
+            <>
+              <div className="relative group">
                 <img
                   src={user?.photoURL}
                   alt="User"
@@ -72,11 +72,13 @@ function Navbar() {
                   {user?.displayName}
                 </span>
               </div>
-              <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
+              <button onClick={handleLogOut} className="btn btn-ghost text-[#063840]">
+                LogOut
+              </button>
             </>
           ) : (
             <>
-              <Link to="/login" className="btn btn-ghost">
+              <Link to="/login" className="btn btn-ghost text-[#063840]">
                 Login
               </Link>
             </>

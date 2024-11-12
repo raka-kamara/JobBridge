@@ -15,7 +15,7 @@ const Banner = () => {
       }}
     >
       <div>
-        <h1 className="text-[#032418] text-center text-4xl font-bold">
+        <h1 className="text-[#063840] text-center text-4xl font-bold">
           <Typewriter
             options={{
               strings: ["Find", "Discover", "Connect with"],
@@ -32,10 +32,10 @@ const Banner = () => {
           50% off on Premium Plans!
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center text-[#063840]">
           <div className="absolute mt-20 grid md:grid-cols-4 gap-10">
             {/* mamba */}
-            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 transition duration-300 ease-in-out  hover:shadow-lg hover:scale-105">
+            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50  transition duration-300 ease-in-out  hover:shadow-lg hover:scale-105">
               <img
                 src={img1}
                 alt="profile image"
@@ -49,7 +49,7 @@ const Banner = () => {
                       Leroy Jenkins
                     </h2>
                   </Fade>
-                  <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+                  <p className="px-5 text-xs sm:text-base ">
                     Full-stack developer
                   </p>
                 </div>
@@ -58,7 +58,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="GitHub"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 496 512"
@@ -73,7 +73,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Twitter"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"
@@ -87,7 +87,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Email"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"
@@ -100,7 +100,7 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 transition duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50  transition duration-300 ease-in-out hover:shadow-lg hover:scale-105">
               <img
                 src={img2}
                 alt="profile image"
@@ -114,7 +114,7 @@ const Banner = () => {
                       Jensy Parker
                     </h2>
                   </Fade>
-                  <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+                  <p className="px-5 text-xs sm:text-base ">
                     UI/UX Designer
                   </p>
                 </div>
@@ -123,7 +123,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="GitHub"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 496 512"
@@ -138,7 +138,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Twitter"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"
@@ -152,7 +152,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Email"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"
@@ -165,7 +165,7 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 transition duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50  transition duration-300 ease-in-out hover:shadow-lg hover:scale-105">
               <img
                 src={img3}
                 alt="profile image"
@@ -179,7 +179,7 @@ const Banner = () => {
                       Hensy Aurther
                     </h2>
                   </Fade>
-                  <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+                  <p className="px-5 text-xs sm:text-base ">
                     Back-end Developer
                   </p>
                 </div>
@@ -188,7 +188,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="GitHub"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 496 512"
@@ -203,7 +203,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Twitter"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"
@@ -217,7 +217,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Email"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"
@@ -231,7 +231,7 @@ const Banner = () => {
               </div>
             </div>
             {/*  */}
-            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 transition duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+            <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50  transition duration-300 ease-in-out hover:shadow-lg hover:scale-105">
               <img
                 src={img4}
                 alt="profile image"
@@ -245,7 +245,7 @@ const Banner = () => {
                       Amellia Shelby
                     </h2>
                   </Fade>
-                  <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+                  <p className="px-5 text-xs sm:text-base ">
                     Full-stack developer
                   </p>
                 </div>
@@ -254,7 +254,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="GitHub"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 496 512"
@@ -269,7 +269,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Twitter"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"
@@ -283,7 +283,7 @@ const Banner = () => {
                     rel="noopener noreferrer"
                     href="#"
                     aria-label="Email"
-                    className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+                    className="p-2 rounded-md  hover:dark:text-violet-600"
                   >
                     <svg
                       viewBox="0 0 512 512"

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 
 export const axiosSecure = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://pico-workers-server.vercel.app",
 });
 
 const useAxiosSecure = () => {

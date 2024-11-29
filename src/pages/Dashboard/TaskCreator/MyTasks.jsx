@@ -37,7 +37,7 @@ const MyTasks = () => {
                             <td>{task.task_quantity}</td>
                             <td>${task.payable_amount.toFixed(2)}</td>
                             <td>
-                                <Link to={`/dashboard/task/${task._id}`}>
+                                <Link to={`/dashboard/taskDetails/${task._id}`}>
                                     <button className="border border-[#2E7D32] rounded-xl p-1 bg-[#F1F8E9] border-b-2 hover:bg-[#C8E6C9] text-[#2E7D32] mb-4 my-2 mx-1">Details</button>
                                 </Link>
                             </td>

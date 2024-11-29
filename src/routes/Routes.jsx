@@ -20,6 +20,7 @@ import PaymentHistory from "../pages/Dashboard/TaskCreator/PaymentHistory";
 import TaskList from "../pages/Dashboard/Worker/TaskList";
 import WorkerHome from "../pages/Dashboard/Worker/WorkerHome";
 import TaskDetails from "../pages/Dashboard/TaskCreator/TaskDetails";
+import Payment from "../pages/Dashboard/Payment";
 
   export const router = createBrowserRouter([{
     path: "/",
@@ -77,7 +78,7 @@ import TaskDetails from "../pages/Dashboard/TaskCreator/TaskDetails";
       {
         path:'taskDetails/:id',
         element:<TaskDetails/>,
-        loader: ({params}) => fetch(`http://localhost:8000/tasks/${params.id}`)
+        loader: ({params}) => fetch(`https://pico-workers-server.vercel.app/tasks/${params.id}`)
       },
       {
         path:'purchaseCoin',
@@ -90,6 +91,10 @@ import TaskDetails from "../pages/Dashboard/TaskCreator/TaskDetails";
       {
         path:'paymentHistory',
         element:<PaymentHistory/>
+      },
+      {
+        path:'payment',
+        element:<Payment/>
       },
     ]
    }
